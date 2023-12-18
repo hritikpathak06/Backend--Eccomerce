@@ -1,6 +1,6 @@
 const Product = require("../models/productModel");
 
-// Create Product
+// Create-Product
 const createProductController = async (req, res) => {
   try {
     const { name, description, price, images, category, stock } = req.body;
@@ -32,8 +32,7 @@ const createProductController = async (req, res) => {
   }
 };
 
-
-// Get All Products
+// Get-All-Products
 const getAllProductController = async (req, res) => {
   try {
     const products = await Product.find({}).populate("category");
@@ -51,7 +50,6 @@ const getAllProductController = async (req, res) => {
     });
   }
 };
-
 
 // Update Product
 const updateProductController = async (req, res) => {
@@ -82,7 +80,6 @@ const updateProductController = async (req, res) => {
   }
 };
 
-
 // Get Single Product
 const getSingleProduct = async (req, res) => {
   try {
@@ -107,7 +104,6 @@ const getSingleProduct = async (req, res) => {
   }
 };
 
-
 // Delete Product
 const deleteProductController = async (req, res) => {
   try {
@@ -130,7 +126,6 @@ const deleteProductController = async (req, res) => {
     });
   }
 };
-
 
 // Search Product
 const searchProductController = async (req, res) => {

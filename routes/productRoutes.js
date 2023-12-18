@@ -7,10 +7,11 @@ const {
   deleteProductController,
   searchProductController,
 } = require("../controller/productController");
+const { isAuthenticatedUser, authorizeRoles } = require("../middlewares/auth");
 const router = express.Router();
 
 // Create-Product
-router.route("/new").post(createProductController);
+router.route("/new").post(isAuthenticatedUser,authorizeRoles("admin"),createProductController);
 
 // Get All Products
 router.route("/all").get(getAllProductController);
