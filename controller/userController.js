@@ -80,11 +80,17 @@ const logoutUserController = async (req, res) => {
 
 // Load User
 const loadUserController = async(req,res) => {
-  
+  const user = await User.findById(req.user.id);
+
+  res.status(200).json({
+    success:true,
+    user
+  })
 }
 
 module.exports = {
   registerUserController,
   loginUserController,
   logoutUserController,
+  loadUserController
 };

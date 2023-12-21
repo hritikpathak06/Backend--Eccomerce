@@ -11,7 +11,7 @@ const port = process.env.PORT || 4000;
 
 // Test Api
 app.get("/",(req,res) => {
-    res.send(`<h1>Server Is Working Properly</h1>`)
+    res.send(`<h1>Server Is Working Properly And Fine</h1>`)
 })
 
 // Server Start Config
