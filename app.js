@@ -15,11 +15,15 @@ const categoryRoutes = require("./routes/categoryRoute");
 const productRoutes = require("./routes/productRoutes");
 const userRoutes = require("./routes/userRoutes");
 const orderRoutes = require("./routes/orderRoutes");
+const paymentRoutes = require("./routes/paymentRoute");
+
 
 // Routes Start Point
 app.use("/api/v1/category", categoryRoutes);
 app.use("/api/v1/product", productRoutes);
 app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/order", orderRoutes);
+app.use("/api/v1",paymentRoutes);
+
 
 module.exports = app;
